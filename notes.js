@@ -1,4 +1,4 @@
-console.log('Starting notes.js');
+// console.log('Starting notes.js');
 
 const fs = require('fs');
 
@@ -33,7 +33,7 @@ var duplicateNotes = notes.filter((note) => note.title === title);
 };
 
 var getAll = () => {
-  console.log('Getting all notes');
+  return fetchNotes();
 };
 
 var getNote = (title) => {
@@ -58,6 +58,9 @@ var removeNote = (title) => {
 };
 
 var logNote = (note) =>{
+  //Break on this line and use repl to output note
+  //use read command with --Title
+  // debugger;
   console.log('--')
   console.log(`Title: ${note.title}`);
   console.log(`Body: ${note.body}`);
